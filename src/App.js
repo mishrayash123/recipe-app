@@ -9,6 +9,10 @@ import NavBar from "./components/NavBar"
 import Login from "./components/Login"
 import Signup from "./components/Signup"
 import Axios from "axios";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./components/firebase-config";
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+
 
 
 
@@ -18,13 +22,31 @@ function App() {
     const [search, setSearch] = useState("");
     const [recipes, setRecipes] = useState([]);
     const [yash, setyash] = useState(false);
+    const [ypt, setypt] = useState(false);
+    const {
+        transcript,
+        listening,
+        resetTranscript,
+        browserSupportsSpeechRecognition
+      } = useSpeechRecognition();
 
     const Id = "9acb4c2b";
     const key = "47ebe2659bfff71dcee66a073802cdbd";
 
-    useEffect(() => {
-        getRecipes();
-    }, []);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+      
+        setypt(true);
+        console.log(user);
+      } else {
+       
+        setypt(false);
+      }
+    });
+    getRecipes();
+  }, [auth.currentUser]);
 
     const getRecipes = async () => {
         const result = await Axios.get(`https://api.edamam.com/search?q=${search}&app_id=${Id}&app_key=${key}`);
@@ -40,6 +62,7 @@ function App() {
         event.preventDefault();
         setyash(true);
         getRecipes();
+        setSearch("");
     };
 
    
@@ -47,25 +70,45 @@ function App() {
     return (
         <BrowserRouter>
         <NavBar />
+        <div className="bg-dark">
+        <button type="button" className=" mx-4 btn bg-dark text-danger " onClick={
+                            (e) => {
+                                SpeechRecognition.startListening();
+                                console.log(transcript);
+                                setSearch(transcript);
+                                setyash(true);
+                                getRecipes();
+                                 resetTranscript();
+                                
+                            }
+                        }><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
+  <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+  <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"/>
+</svg></button>
+</div>
         <Routes>
+        <Route path="/login" element={<div>
+                <Login />
+                
+            </div>} />
             <Route path="/" element={<div className="App">
             <div>
                 <Header search={search}
                 onSubmit={onSearchClick}
                     onInputChange={onInputChange}
                     onSearchClick={onSearchClick}/>
-                <> {
-                    yash ? <div className="container">
+                <> { ypt ? 
+                    yash ? <div> <div className="container">
                         <Recipes recipes={recipes}/>
-                    </div> : <Default/>
+                    </div> <Footer />
+                    </div> : <div>
+                        <Default />
+                        <Footer />
+                    </div> :
+                    <Login />
                 } </>
-                <Footer/>
             </div>
         </div>} />
-         <Route path="/login" element={<div>
-                <Login />
-                
-            </div>} />
          <Route path="/signup" element={<Signup />} />
         </Routes>
         </BrowserRouter>

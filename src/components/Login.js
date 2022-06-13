@@ -21,14 +21,15 @@ export default function Login() {
             const errorCode = error.code;
             setsk(errorCode);
         });
+        
     };
 
     return (
-        <div>
+        <div className="mt-5">
             <p className="mt-5 text-warning text-center">
                 {sh} </p>
             <form onSubmit={login}
-                className="mt-3 bg-secondary position-absolute top-50 start-50 translate-middle border border-dark border border-3 border-opacity-100 rounded">
+                className="mx-auto w-50 mt-5 bg-secondary   border border-dark border border-3 border-opacity-100 rounded">
                 <h5 className="text-center m-3">Login</h5>
                 <div className="m-3">
                     <label className="form-label">Email address</label>
@@ -56,7 +57,7 @@ export default function Login() {
         <button type="submit" className="btn btn-dark m-3"
             onClick={login}>Login</button>
     </form>
-    <div className=" mt-5 position-absolute top-100 start-50 translate-middle">
+    <div className=" mt-5">
         <h5 className=" text-center">Made ♡  by Yash</h5>
     </div>
 </div>

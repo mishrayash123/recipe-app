@@ -23,11 +23,11 @@ export default function Signup() {
     };
 
     return (
-        <div>
+        <div mt-5>
             <p className="mt-5 text-warning text-center">
                 {sg} </p>
             <form onSubmit={signup}
-                className=" mt-3 bg-secondary position-absolute top-50 start-50 translate-middle border border-dark border border-3 border-opacity-100 rounded">
+                className=" mx-auto w-50 mt-5 bg-secondary   border border-dark border border-3 border-opacity-100 rounded">
                 <h5 className="text-center m-3">Signup</h5>
                 <div className="m-3">
                     <label className="form-label">Email address</label>
@@ -55,7 +55,7 @@ export default function Signup() {
         <button type="submit" className="btn btn-dark m-3"
             onClick={signup}>Signup</button>
     </form>
-    <div className=" mt-5 position-absolute top-100 start-50 translate-middle">
+    <div className=" mt-5">
         <h5 className=" text-center">Made ♡  by Yash</h5>
     </div>
 </div>
