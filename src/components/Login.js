@@ -49,6 +49,9 @@ export default function Login() {
                         }
                     }/>
             </div>
+            <p className="m-3">
+            <Link to="/forgetpassword" className="nav-link text-warning">Forget Password</Link>
+        </p>
         <p className="m-3 text-warning">
             {sk} </p>
         <p className="m-3">If you don't have an account :

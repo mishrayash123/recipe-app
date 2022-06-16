@@ -8,6 +8,7 @@ import Default from "./components/Default";
 import NavBar from "./components/NavBar"
 import Login from "./components/Login"
 import Signup from "./components/Signup"
+import Forgetpassword from "./components/Forgetpassword"
 import Axios from "axios";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./components/firebase-config";
@@ -58,6 +59,14 @@ function App() {
         setSearch(e.target.value)
     };
 
+    const voice = e => {
+      SpeechRecognition.startListening();
+      setSearch(transcript);
+      setyash(true);
+      getRecipes();
+       resetTranscript();
+    }
+
     const onSearchClick = (event) => {
         event.preventDefault();
         setyash(true);
@@ -71,17 +80,7 @@ function App() {
         <BrowserRouter>
         <NavBar />
         <div className="bg-dark">
-        <button type="button" className=" mx-4 btn bg-dark text-danger " onClick={
-                            (e) => {
-                                SpeechRecognition.startListening();
-                                console.log(transcript);
-                                setSearch(transcript);
-                                setyash(true);
-                                getRecipes();
-                                 resetTranscript();
-                                
-                            }
-                        }><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
+        <button type="button" className=" mx-4 btn bg-dark text-danger " onClick={voice}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
   <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
   <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"/>
 </svg></button>
@@ -110,6 +109,7 @@ function App() {
             </div>
         </div>} />
          <Route path="/signup" element={<Signup />} />
+         <Route path="/forgetpassword" element={<Forgetpassword />} />
         </Routes>
         </BrowserRouter>
     );
