@@ -33,17 +33,17 @@ const Fav = (props) => {
 
                         <li className="list-group-item bg-info">
                             <h6>DishType : {
-                                fav.dishType
+                                fav.dishtype
                             }</h6>
                         </li>
                         <li className="list-group-item bg-info">
                             <h6>MealType : {
-                                fav.mealType
+                                fav.mealtype
                             }</h6>
                         </li>
                         <li className="list-group-item bg-info">
                             <h6>CuisineType : {
-                               fav.cuisineType
+                               fav.cuisinetype
                             }</h6>
                         </li>
                         <li className="list-group-item bg-info">
