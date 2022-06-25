@@ -1,7 +1,24 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
+import { doc, setDoc ,deleteDoc} from "firebase/firestore";
+import { db } from "./firebase-config"; 
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./firebase-config";
 
 const Recipes = (props) => {
     const {recipes} = props;
+     
+    const [uid, setuid] = useState("");
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+          setuid(user.uid);
+          } else {
+           setuid("");
+          }
+        });
+        
+      }, [auth.currentUser]);
+
 
     return (
         <div className="row mt-4">
@@ -63,6 +80,26 @@ const Recipes = (props) => {
                             className="btn btn-secondary"
                             target="_blank"
                             rel="noreferrer noopener">Full Recipe</a>
+
+                    <button onClick={
+                        (e) =>{
+                        setDoc(doc(db,uid,recipe.recipe.label), {
+                            image : recipe.recipe.image,
+                            label : recipe.recipe.label,
+                            dishtype : recipe.recipe.dishType,
+                            mealtype : recipe.recipe.mealType,
+                            cuisinetype:recipe.recipe.cuisineType,
+                            calories: recipe.recipe.calories,
+                            url : recipe.recipe.url  
+                          }
+                          );
+                       }
+                    }> add to fav</button>
+                    <button onClick={
+                        (e) =>{
+                            deleteDoc(doc(db,uid,recipe.recipe.label));
+                       }
+                    }> delete</button>
                     </div>
                 </div>
             ))

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = props => {
+const Foot = () => {
 
     return(
         <div className=" mt-5">
@@ -12,4 +12,4 @@ const Footer = props => {
 
 
 
-export default Footer;
+export default Foot;

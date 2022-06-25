@@ -1,23 +1,46 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { signOut, onAuthStateChanged } from "firebase/auth";
-import { auth } from "./firebase-config";
+import { auth,db } from "./firebase-config";
+import { collection } from "firebase/firestore";
+import {getDocs, } from "firebase/firestore";
 
-export default function NavBar() {
+
+ function NavBar({setfav}) {
   const [ya, setya] = useState(false);
   const [st, setst] = useState("");
+  const [uid, setuid] = useState("");
+
+  
+  
+
+ 
+
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        setst(user.email);
         setya(true);
+        setuid(user.uid);
+        setst(user.email);
+       
         console.log(user);
       } else {
-        setya(false);
+        setya(false)
+        setuid(user.uid);
+        
       }
     });
+    fidata();
   }, [auth.currentUser]);
+
+  const fidata = async () => {
+    const colRef = collection(db,uid);
+    const snapshots = await getDocs(colRef);
+    const docs = snapshots.docs.map(doc => doc.data());
+    setfav(docs);
+    console.log(docs);
+  }
 
   const logout = async () => {
     signOut(auth)
@@ -54,6 +77,11 @@ export default function NavBar() {
             </li>
           </ul>
           <ul className="navbar-nav  ">
+          <li className="nav-item mx-3">
+              <Link to="/fav" className="nav-link text-danger " onClick={fidata}>
+                Favourites
+              </Link>
+            </li>
             <li className="nav-item mx-3">
               <Link to="/login" className="nav-link text-danger">
                 Log in
@@ -77,3 +105,5 @@ export default function NavBar() {
     </nav>
   );
 }
+
+export default NavBar;
