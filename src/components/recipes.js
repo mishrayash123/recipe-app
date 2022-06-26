@@ -28,21 +28,27 @@ const Recipes = (props) => {
             {
             recipes.map(recipe => (
                 <div className="col-md-3 mt-4" >
-                    <div className="card py-2 border-danger  text-center bg-warning" onMouseOver={async (e) =>{
+                    <div className="card py-2 border-danger  text-center bg-warning" onMouseEnter={async (e) =>{
                     const docRef = doc(db, uid,recipe.recipe.label );
                     const docSnap = await getDoc(docRef);
                     if (docSnap.exists()) {
                         const element = document.getElementById(recipe.recipe.label);
                         element.innerHTML="&#10084;";
-                        element.style.fontSize = "30px";
+                        element.style.fontSize = "2rem";
 element.style.color = "#FF0000";
                         
                              } else {
                                 const element = document.getElementById(recipe.recipe.label);
                                 element.innerHTML="♡ ";
-                                element.style.fontSize = "30px";
+                                element.style.fontSize = "2rem";
                                 element.style.color = "#FF0000";
                              }
+               }}
+
+               onMouseLeave={ async (e) => {
+                const element = document.getElementById(recipe.recipe.label);
+                                element.innerHTML="";
+                                
                }}
                >
                         {/* <img className="img-fluid w-50 mx-auto p-1 rounded-circle" src={recipe.recipe.image}></img> */}
@@ -56,13 +62,13 @@ element.style.color = "#FF0000";
                                     recipe.recipe.image
                             }></img>
                         </a>
-                        <div id={recipe.recipe.label}></div>
                         
                         <div className="card-body bg-success">
 
                             <h5>{
                                 recipe.recipe.label
                             }</h5>
+                            <h5 id={recipe.recipe.label}></h5>
                         </div>
 
                         <ul className="list-group list-group-flush">
@@ -101,8 +107,8 @@ element.style.color = "#FF0000";
                             className="btn btn-secondary"
                             target="_blank"
                             rel="noreferrer noopener">Full Recipe</a>
-
-                    <button onClick={
+               <div >
+                    <button  className="btn btn-danger w-50 " onClick={
                        async (e) =>{
                             const docRef = doc(db, uid,recipe.recipe.label );
                             const docSnap = await getDoc(docRef);
@@ -123,7 +129,7 @@ element.style.color = "#FF0000";
                               }
                        }
                     }> add to fav</button>
-                    <button onClick={
+                    <button  className="btn btn-danger w-50" onClick={
                        async (e) =>{
                             const docRef = doc(db, uid,recipe.recipe.label );
                             const docSnap = await getDoc(docRef);
@@ -134,7 +140,8 @@ element.style.color = "#FF0000";
                                   alert("It is not in favourites");
                               }
                        }
-                    }> delete</button>
+                    }> delete from fav</button>
+                    </div>
                     </div>
                 </div>
             ))
