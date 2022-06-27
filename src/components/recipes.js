@@ -34,13 +34,13 @@ const Recipes = (props) => {
                     if (docSnap.exists()) {
                         const element = document.getElementById(recipe.recipe.label);
                         element.innerHTML="&#10084;";
-                        element.style.fontSize = "2rem";
+                        element.style.fontSize = "1.5rem";
 element.style.color = "#FF0000";
                         
                              } else {
                                 const element = document.getElementById(recipe.recipe.label);
                                 element.innerHTML="♡ ";
-                                element.style.fontSize = "2rem";
+                                element.style.fontSize = "1.5rem";
                                 element.style.color = "#FF0000";
                              }
                }}
@@ -51,6 +51,9 @@ element.style.color = "#FF0000";
                                 
                }}
                >
+                <div className=" text-end m-1">
+                <h5  id={recipe.recipe.label}></h5>
+                </div>
                         {/* <img className="img-fluid w-50 mx-auto p-1 rounded-circle" src={recipe.recipe.image}></img> */}
                         <a href={
                                 recipe.recipe.url
@@ -63,7 +66,6 @@ element.style.color = "#FF0000";
                             }></img>
                             
                         </a>
-                        <h5 id={recipe.recipe.label}></h5>
                         <div className="card-body bg-success">
 
                             <h5>{
@@ -105,11 +107,11 @@ element.style.color = "#FF0000";
                         <a href={
                                 recipe.recipe.url
                             }
-                            className="btn btn-secondary"
+                            className="btn btn-secondary mt-1"
                             target="_blank"
                             rel="noreferrer noopener">Full Recipe</a>
-               <div >
-                    <button  className="btn btn-danger w-50 " onClick={
+               
+                    <button  className="btn btn-danger mt-1" onClick={
                        async (e) =>{
                             const docRef = doc(db, uid,recipe.recipe.label );
                             const docSnap = await getDoc(docRef);
@@ -130,7 +132,7 @@ element.style.color = "#FF0000";
                               }
                        }
                     }> add to fav</button>
-                    <button  className="btn btn-danger w-50" onClick={
+                    <button  className="btn btn-danger mt-1" onClick={
                        async (e) =>{
                             const docRef = doc(db, uid,recipe.recipe.label );
                             const docSnap = await getDoc(docRef);
@@ -142,7 +144,7 @@ element.style.color = "#FF0000";
                               }
                        }
                     }> delete from fav</button>
-                    </div>
+                
                     </div>
                 </div>
             ))
