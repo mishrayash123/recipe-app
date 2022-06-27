@@ -61,14 +61,15 @@ element.style.color = "#FF0000";
                                 src={
                                     recipe.recipe.image
                             }></img>
+                            
                         </a>
-                        
+                        <h5 id={recipe.recipe.label}></h5>
                         <div className="card-body bg-success">
 
                             <h5>{
                                 recipe.recipe.label
                             }</h5>
-                            <h5 id={recipe.recipe.label}></h5>
+                            
                         </div>
 
                         <ul className="list-group list-group-flush">
