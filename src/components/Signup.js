@@ -23,7 +23,7 @@ export default function Signup() {
     };
 
     return (
-        <div mt-5>
+        <div className="mt-36">
             <p className="mt-5 text-warning text-center">
                 {sg} </p>
             <form onSubmit={signup}
@@ -55,9 +55,7 @@ export default function Signup() {
         <button type="submit" className="btn btn-dark m-3"
             onClick={signup}>Signup</button>
     </form>
-    <div className=" mt-5">
-        <h5 className=" text-center">Made ♡  by Yash</h5>
-    </div>
+    
 </div>
     );
 }

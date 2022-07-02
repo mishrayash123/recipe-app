@@ -5,7 +5,8 @@ import sp from '../sp.jpg'
 
 const Default = props => {
     return(
-        <div className="card-group mt-5 mx-2 my-2">
+      <div className=" mb-40 bg-slate-800 dark:bg-black">
+        <div className="card-group mt-5 mx-2 my-2 ">
   <div className="card m-1">
     <img src={sk} className="figure-img img-fluid rounded" alt="..." />
     <div className="card-body">
@@ -32,6 +33,7 @@ const Default = props => {
       <p className="card-text">For full recipe go to link of "Full Recipe", click on icon and use it.</p>
     </div>
   </div>
+</div>
 </div>
     );
 };

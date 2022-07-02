@@ -25,7 +25,7 @@ export default function Login() {
     };
 
     return (
-        <div className="mt-5">
+        <div className="mt-36 ">
             <p className="mt-5 text-warning text-center">
                 {sh} </p>
             <form onSubmit={login}
@@ -60,9 +60,6 @@ export default function Login() {
         <button type="submit" className="btn btn-dark m-3"
             onClick={login}>Login</button>
     </form>
-    <div className=" mt-5">
-        <h5 className=" text-center">Made ♡  by Yash</h5>
-    </div>
 </div>
     );
 }

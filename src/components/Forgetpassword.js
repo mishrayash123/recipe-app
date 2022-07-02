@@ -21,7 +21,7 @@ export default function Forgetpassword() {
     };
 
     return (
-        <div className="mt-5">
+        <div className="mt-36">
             <form onSubmit={forgetpassword}
                 className="mx-auto w-50 mt-5 bg-secondary   border border-dark border border-3 border-opacity-100 rounded">
                 <h5 className="text-center m-3">Forget Password</h5>
@@ -42,9 +42,6 @@ export default function Forgetpassword() {
             <button type="submit" className="btn btn-dark m-3"
                 onClick={forgetpassword}>Send reset link</button>
         </form>
-        <div className=" mt-5">
-            <h5 className=" text-center">Made ♡  by Yash</h5>
-        </div>
     </div>
     );
 }

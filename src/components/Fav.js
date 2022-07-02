@@ -1,11 +1,37 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import {onAuthStateChanged} from "firebase/auth";
+import {auth, db} from "./firebase-config";
+import {doc, deleteDoc} from "firebase/firestore";
 
 
 
 const Fav = (props) => {
     const {fav} = props;
-    
+    const [uid, setuid] = useState("hfhjgvhb");
+    const length =fav.length;
+
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setuid(user.uid);
+
+                console.log(user);
+            } else {
+                setuid("");
+
+            }
+        });
+
+    }, [auth.currentUser]);
+
     return (
+        <>{ length===0 ? <div className="bg-slate-800 dark:bg-black">
+        <h2 className="text-white font-serif text-3xl text-center mt-44 ">You have no favourite items</h2>
+        <h2 className="text-white font-serif text-9xl text-center my-20">🙅</h2>
+        
+    </div>  :
+
+        <div className="mt-36 mb-56">
         <div className="row m-4">
         {
         fav.map(fav => (
@@ -65,11 +91,27 @@ const Fav = (props) => {
                         className="btn btn-secondary"
                         target="_blank"
                         rel="noreferrer noopener">Full Recipe</a>
+                         <div className="border border-light border  border-opacity-25">
+                                    <button className="btn btn-secondary w-100"
+                                        onClick={
+                                            async (e) => {
+
+                                                deleteDoc(doc(db, uid, fav.label));
+                                                alert("Deleted from favourites");
+
+
+                                            }
+                                    }>
+                                        Delete from fav &#9825;</button>
+                                </div>
                
                 </div>
             </div>
         ))
     } </div>
+    </div>
+    }
+    </>
     );
 };
 

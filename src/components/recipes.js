@@ -24,33 +24,11 @@ const Recipes = (props) => {
 
 
     return (
-        <div className="row mt-4">
+        <div className="row mt-4 mb-72">
             {
             recipes.map(recipe => (
-                <div className="col-md-3 mt-4" >
-                    <div className="card py-2 border-danger  text-center bg-warning" onMouseEnter={async (e) =>{
-                    const docRef = doc(db, uid,recipe.recipe.label );
-                    const docSnap = await getDoc(docRef);
-                    if (docSnap.exists()) {
-                        const element = document.getElementById(recipe.recipe.label);
-                        element.innerHTML="&#10084;";
-                        element.style.fontSize = "1.5rem";
-element.style.color = "#FF0000";
-                        
-                             } else {
-                                const element = document.getElementById(recipe.recipe.label);
-                                element.innerHTML="♡ ";
-                                element.style.fontSize = "1.5rem";
-                                element.style.color = "#FF0000";
-                             }
-               }}
-
-               onMouseLeave={ async (e) => {
-                const element = document.getElementById(recipe.recipe.label);
-                                element.innerHTML="";
-                                
-               }}
-               >
+                <div className="col-md-3 mt-4  bg-slate-800 dark:bg-black" >
+                    <div className="card py-2 border-danger  text-center bg-warning">
                 <div className=" text-end m-1">
                 <h5  id={recipe.recipe.label}></h5>
                 </div>
@@ -132,19 +110,6 @@ element.style.color = "#FF0000";
                               }
                        }
                     }> add to fav</button>
-                    <button  className="btn btn-danger mt-1" onClick={
-                       async (e) =>{
-                            const docRef = doc(db, uid,recipe.recipe.label );
-                            const docSnap = await getDoc(docRef);
-                            if (docSnap.exists()) {
-                                deleteDoc(doc(db,uid,recipe.recipe.label));
-                                alert("Deleted from favourites");
-                              } else {
-                                  alert("It is not in favourites");
-                              }
-                       }
-                    }> delete from fav</button>
-                
                     </div>
                 </div>
             ))
