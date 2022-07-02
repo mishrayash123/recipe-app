@@ -25,7 +25,7 @@ export default function Login() {
     };
 
     return (
-        <div className="mt-36 ">
+        <div className="mt-36 mb-56">
             <p className="mt-5 text-warning text-center">
                 {sh} </p>
             <form onSubmit={login}
