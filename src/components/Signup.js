@@ -27,10 +27,10 @@ export default function Signup() {
             <p className="mt-5 text-warning text-center">
                 {sg} </p>
             <form onSubmit={signup}
-                className=" mx-auto w-50 mt-5 bg-secondary   border border-dark border border-3 border-opacity-100 rounded">
-                <h5 className="text-center m-3">Signup</h5>
+                className=" mx-auto w-50 mt-5 bg-gradient-to-r from-rose-900 via-fuchsia-900 to-purple-900   border border-dark border border-3 border-opacity-100 rounded">
+                <h5 className="text-center m-3 text-white">Signup</h5>
                 <div className="m-3">
-                    <label className="form-label">Email address</label>
+                    <label className="form-label text-white">Email address</label>
                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         onChange={
                             (e) => {
@@ -39,7 +39,7 @@ export default function Signup() {
                         }/>
                 </div>
             <div className="m-3">
-                <label className="form-label">Password</label>
+                <label className="form-label text-white">Password</label>
                 <input type="password" className="form-control" id="exampleInputPassword1"
                     onChange={
                         (e) => {
@@ -49,7 +49,7 @@ export default function Signup() {
             </div>
         <p className="m-3 text-warning">
             {sy} </p>
-        <p className="m-3">If you have an account :
+        <p className="m-3 text-white">If you have an account :
             <Link to="/login" className="nav-link text-warning">Login</Link>
         </p>
         <button type="submit" className="btn btn-dark m-3"

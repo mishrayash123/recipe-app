@@ -23,10 +23,10 @@ export default function Forgetpassword() {
     return (
         <div className="mt-36 mb-56">
             <form onSubmit={forgetpassword}
-                className="mx-auto w-50 mt-5 bg-secondary   border border-dark border border-3 border-opacity-100 rounded">
-                <h5 className="text-center m-3">Forget Password</h5>
+                className="mx-auto w-50 mt-5 bg-gradient-to-r from-rose-900 via-fuchsia-900 to-purple-900   border border-dark border border-3 border-opacity-100 rounded">
+                <h5 className="text-center m-3 text-white">Forget Password</h5>
                 <div className="m-3">
-                    <label className="form-label">Email address</label>
+                    <label className="form-label text-white">Email address</label>
                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         onChange={
                             (e) => {
