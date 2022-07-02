@@ -95,7 +95,7 @@ function App() {
                 <Login />
                 <Foot />
             </div>} />
-            <Route path="/" element={<div className="bg-slate-800 dark:bg-black">
+            <Route path="/" element={<div className="bg-slate-800 dark:bg-black mb-56">
             <div>
                 <Header search={search}
                 onSubmit={onSearchClick}
