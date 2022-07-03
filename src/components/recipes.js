@@ -27,7 +27,7 @@ const Recipes = (props) => {
         <div className="row mt-4 mb-72">
             {
             recipes.map(recipe => (
-                <div className="col-md-3 mt-4  bg-slate-800 dark:bg-black" >
+                <div className="col-md-3 mt-4  bg-slate-200 dark:bg-black" >
                     <div className="card py-2 border-white/50  text-center bg-gradient-to-r from-indigo-900 via-pink-800 to-orange-900">
                 <div className=" text-end m-1">
                 </div>

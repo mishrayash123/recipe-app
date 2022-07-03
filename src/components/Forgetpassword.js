@@ -37,7 +37,7 @@ export default function Forgetpassword() {
             <p className="m-3 text-warning">
                 {sa} </p>
             <p className="m-3">
-                <Link to="/login" className="nav-link text-warning">Login</Link>
+                <Link to="/login" className="nav-link text-warning">Log in</Link>
             </p>
             <button type="submit" className="btn btn-dark m-3"
                 onClick={forgetpassword}>Send reset link</button>

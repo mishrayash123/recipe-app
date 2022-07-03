@@ -25,8 +25,8 @@ const Fav = (props) => {
     }, [auth.currentUser]);
 
     return (
-        <>{ length===0 ? <div className="bg-slate-800 dark:bg-black">
-        <h2 className="text-white font-serif text-3xl text-center mt-56 ">You have no favourite items</h2>
+        <>{ length===0 ? <div className="bg-slate-200 dark:bg-black">
+        <h2 className=" font-serif text-3xl text-center mt-56 dark:text-white ">You have no favourite items</h2>
         <h2 className="text-white font-serif text-9xl text-center my-20 mb-56">🙅</h2>
         
     </div>  :
