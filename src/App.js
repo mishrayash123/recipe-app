@@ -13,7 +13,8 @@ import Fav from "./components/Fav";
 import Axios from "axios";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth} from "./components/firebase-config";
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+// import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import Wishes from './components/Wishes';
 
 
 function App() {
@@ -84,6 +85,7 @@ function App() {
       <div className="bg-slate-200 dark:bg-black">
         <BrowserRouter>
         <NavBar setfav={setfav} />
+        <Wishes />
         {/* <div className="bg-dark">
         <button type="button" className=" mx-4 btn bg-dark text-danger " onClick={voice}><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
   <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>

@@ -4,7 +4,7 @@ const Header = props => {
     const {search, onInputChange, onSearchClick }= props;
 
     return(
-       <div className="jumbotron mt-16 bg-slate-200 dark:bg-black p-5">
+       <div className="jumbotron mt-1 bg-slate-200 dark:bg-black p-5">
            <h1 className="display-1 text-center text-danger mb-5 italic" >
 Food Recipes</h1>
   <form onSubmit={onSearchClick}>
