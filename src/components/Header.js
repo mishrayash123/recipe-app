@@ -5,7 +5,7 @@ const Header = props => {
 
     return(
        <div className="jumbotron mt-1 bg-slate-200 dark:bg-black p-5">
-           <h1 className="display-1 text-center text-danger mb-5 italic" >
+           <h1 className="display-1 text-center text-fuchsia-900 dark:text-white mb-5 font-mono italic font-extrabold " >
 Food Recipes</h1>
   <form onSubmit={onSearchClick}>
   <div className="input-group  mx-auto">
