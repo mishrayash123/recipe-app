@@ -46,7 +46,7 @@ function App() {
         setypt(false);
       }
     });
-  
+    // setSearch();
     getRecipes();
   }, [auth.currentUser]);
 
@@ -65,8 +65,9 @@ function App() {
     // const voice = e => {
     //   SpeechRecognition.startListening();
     //   setTimeout(()=> { SpeechRecognition.stopListening();
-    //     setyash(true);
     //     setSearch(transcript);
+    //     console.log(search)
+    //     setyash(true);
     //   getRecipes();
     //   }, 5000);
     // }

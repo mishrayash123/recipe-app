@@ -11,7 +11,7 @@ export default function Signup() {
     const [Email, setEmail] = useState("");
     const [Password, setPassword] = useState("");
     const [sy, setsy] = useState("");
-    const [sg, setsg] = useState("");
+    
 
     const provider = new GoogleAuthProvider();
     provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
@@ -46,7 +46,7 @@ export default function Signup() {
         event.preventDefault();
         createUserWithEmailAndPassword(auth, Email, Password).then((userCredential) => { // Signed in
             const user = userCredential.user;
-            setsg("user signed up successfully")
+            alert("user signed up successfully")
         }).catch((error) => {
             const errorCode = error.code;
             setsy(errorCode);
@@ -55,8 +55,7 @@ export default function Signup() {
 
     return (
         <div className="mt-36 mb-56">
-            <p className="mt-5 text-warning text-center">
-                {sg} </p>
+            
             <form onSubmit={signup}
                 className=" mx-auto w-50 mt-5 bg-gradient-to-r from-rose-900 via-fuchsia-900 to-purple-900   border border-dark border border-3 border-opacity-100 rounded">
                 <h5 className="text-center m-3 text-white">Sign up</h5>

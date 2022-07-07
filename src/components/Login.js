@@ -11,7 +11,7 @@ export default function Login() {
     const [LoginEmail, setaLoginEmail] = useState("");
     const [LoginPassword, setLoginPassword] = useState("");
     const [sk, setsk] = useState("");
-    const [sh, setsh] = useState("");
+    
 
     const provider = new GoogleAuthProvider();
     provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
@@ -41,7 +41,7 @@ export default function Login() {
         event.preventDefault();
         signInWithEmailAndPassword(auth, LoginEmail, LoginPassword).then((userCredential) => { // Signed in
             const user = userCredential.user;
-            setsh("user signed in successfully")
+            alert("user signed in successfully")
             // ...
         }).catch((error) => {
             const errorCode = error.code;
@@ -52,8 +52,7 @@ export default function Login() {
 
     return (
         <div className="mt-36 mb-56">
-            <p className="mt-5 text-warning text-center">
-                {sh} </p>
+        
             <form onSubmit={login}
                 className="mx-auto w-50 mt-5 bg-gradient-to-r from-rose-900 via-fuchsia-900 to-purple-900  border border-dark border border-3 border-opacity-100 rounded">
                 <h5 className="text-center m-3 text-white">Log in</h5>
