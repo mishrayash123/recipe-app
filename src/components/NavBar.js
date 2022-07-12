@@ -61,7 +61,7 @@ const logout = async () => {
                   alt="Workflow"
                 /> */}
               </div>
-                <h1 className="text-white underline decoration-wavy decoration-4 italic text-2xl mb-2">Freci</h1>
+                <a className="text-white underline decoration-wavy decoration-4 italic text-2xl mb-2" href="/">Freci</a>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                 <Link to="/" className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">

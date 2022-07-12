@@ -24,11 +24,11 @@ const Recipes = (props) => {
 
 
     return (
-        <div className="row mt-4 mb-72">
+        <div className="row mt-4 mx-2 mb-72">
             {
             recipes.map(recipe => (
-                <div className="col-md-3 mt-4  bg-slate-200 dark:bg-black" >
-                    <div className="card py-2 border-white/50  text-center bg-gradient-to-r from-indigo-900 via-pink-800 to-orange-900">
+                <div className="col-md-3 mt-4  bg-slate-200 dark:bg-black " >
+                    <div className="card py-2 border-white/50  text-center bg-gradient-to-r from-indigo-900 via-pink-900 to-orange-900">
                 <div className=" text-end m-1">
                 </div>
                         {/* <img className="img-fluid w-50 mx-auto p-1 rounded-circle" src={recipe.recipe.image}></img> */}
@@ -43,7 +43,7 @@ const Recipes = (props) => {
                             }></img>
                             
                         </a>
-                        <div className="card-body bg-gradient-to-r from-fuchsia-700 via-yellow-700 to-violet-900 text-white">
+                        <div className="card-body bg-gradient-to-r from-fuchsia-900 via-yellow-900 to-violet-900 text-white">
 
                             <h5>{
                                 recipe.recipe.label
@@ -53,22 +53,22 @@ const Recipes = (props) => {
 
                         <ul className="list-group list-group-flush">
 
-                            <li className="list-group-item bg-gradient-to-r from-fuchsia-700 via-yellow-700 to-violet-900 text-white">
+                            <li className="list-group-item bg-gradient-to-r from-fuchsia-900 via-yellow-900 to-violet-900 text-white">
                                 <h6>DishType : {
                                     recipe.recipe.dishType
                                 }</h6>
                             </li>
-                            <li className="list-group-item bg-gradient-to-r from-fuchsia-700 via-yellow-700 to-violet-900 text-white">
+                            <li className="list-group-item bg-gradient-to-r from-fuchsia-900 via-yellow-900 to-violet-900 text-white">
                                 <h6>MealType : {
                                     recipe.recipe.mealType
                                 }</h6>
                             </li>
-                            <li className="list-group-item bg-gradient-to-r from-fuchsia-700 via-yellow-700 to-violet-900 text-white">
+                            <li className="list-group-item bg-gradient-to-r from-fuchsia-900 via-yellow-900 to-violet-900 text-white">
                                 <h6>CuisineType : {
                                     recipe.recipe.cuisineType
                                 }</h6>
                             </li>
-                            <li className="list-group-item bg-gradient-to-r from-fuchsia-700 via-yellow-700 to-violet-900 text-white">
+                            <li className="list-group-item bg-gradient-to-r from-fuchsia-900 via-yellow-900 to-violet-900 text-white">
                                 <h6>Calories : {
                                     recipe.recipe.calories
                                 }</h6>
@@ -85,12 +85,12 @@ const Recipes = (props) => {
                         <a href={
                                 recipe.recipe.url
                             }
-                            className="btn  text-light bg-gradient-to-r from-indigo-900 via-pink-800 to-orange-900 w-100"
+                            className="btn  text-light bg-gradient-to-r from-indigo-900 via-pink-900 to-orange-900 w-100"
                             target="_blank"
                             rel="noreferrer noopener">Full Recipe</a>
                             </div>
                <div className="border border-light border  border-opacity-25">
-                    <button  className="btn  text-light bg-gradient-to-r from-indigo-900 via-pink-800 to-orange-900 w-100" onClick={
+                    <button  className="btn  text-light bg-gradient-to-r from-indigo-900 via-pink-900 to-orange-900 w-100" onClick={
                        async (e) =>{
                             const docRef = doc(db, uid,recipe.recipe.label );
                             const docSnap = await getDoc(docRef);
