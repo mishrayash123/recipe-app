@@ -4,8 +4,8 @@ const Header = props => {
     const {search, onInputChange, onSearchClick }= props;
 
     return(
-       <div className="jumbotron mt-1 bg-slate-200 dark:bg-black p-5">
-           <h1 className="display-1 text-center text-fuchsia-900 dark:text-white mb-5 font-mono italic font-extrabold " >
+       <div className="jumbotron mt-1 bg-rose-900 dark:bg-black p-5">
+           <h1 className="display-1 text-center  dark:text-white mb-5 font-mono italic font-extrabold " >
 Food Recipes</h1>
   <form onSubmit={onSearchClick}>
   <div className="input-group  mx-auto">
@@ -13,7 +13,9 @@ Food Recipes</h1>
   <button type="button" className=" text-black dark:bg-white btn btn-primary dark:hover:bg-red-500 border border-primary rounded-1" onClick={onSearchClick}>Search</button>
 </div>
   </form>
+  
        </div>
+
     );
 };
 

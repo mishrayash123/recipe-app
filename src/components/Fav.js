@@ -25,7 +25,7 @@ const Fav = (props) => {
     }, [auth.currentUser]);
 
     return (
-        <>{ length===0 ? <div className="bg-slate-200 dark:bg-black">
+        <>{ length===0 ? <div className="bg-rose-900 dark:bg-black">
         <h2 className=" font-serif text-3xl text-center mt-56 dark:text-white ">You have no favourite items</h2>
         <h2 className="text-white font-serif text-9xl text-center my-20 mb-56">🙅</h2>
         
@@ -36,7 +36,7 @@ const Fav = (props) => {
         {
         fav.map(fav => (
             <div className="col-md-3 mt-4">
-                <div className="card py-2 border-danger  text-center bg-gradient-to-r from-indigo-900 via-pink-900 to-orange-900">
+                <div className="card py-2 border-white/10  text-center bg-white/10">
                     {/* <img className="img-fluid w-50 mx-auto p-1 rounded-circle" src={recipe.recipe.image}></img> */}
                     <a href={
                             fav.url
@@ -48,7 +48,7 @@ const Fav = (props) => {
                                 fav.image
                         }></img>
                     </a>
-                    <div className="card-body bg- bg-gradient-to-r from-fuchsia-900 via-yellow-900 to-violet-900 text-white">
+                    <div className="card-body bg-white/10 text-white">
 
                         <h5>{
                             fav.label
@@ -57,22 +57,22 @@ const Fav = (props) => {
 
                     <ul className="list-group list-group-flush">
 
-                        <li className="list-group-item  bg-gradient-to-r from-fuchsia-900 via-yellow-900 to-violet-900 text-white">
+                        <li className="list-group-item  bg-white/10 text-white">
                             <h6>DishType : {
                                 fav.dishtype
                             }</h6>
                         </li>
-                        <li className="list-group-item  bg-gradient-to-r from-fuchsia-900 via-yellow-900 to-violet-900 text-white">
+                        <li className="list-group-item  bg-white/10 text-white">
                             <h6>MealType : {
                                 fav.mealtype
                             }</h6>
                         </li>
-                        <li className="list-group-item  bg-gradient-to-r from-fuchsia-900 via-yellow-900 to-violet-900 text-white">
+                        <li className="list-group-item  bg-white/10 text-white">
                             <h6>CuisineType : {
                                fav.cuisinetype
                             }</h6>
                         </li>
-                        <li className="list-group-item  bg-gradient-to-r from-fuchsia-900 via-yellow-900 to-violet-900 text-white">
+                        <li className="list-group-item  bg-white/10 text-white">
                             <h6>Calories : {
                                 fav.calories
                             }</h6>
@@ -89,12 +89,12 @@ const Fav = (props) => {
                     <a href={
                             fav.url
                         }
-                        className="btn  text-light bg-gradient-to-r from-indigo-900 via-pink-900 to-orange-900 w-100"
+                        className="btn  text-light bg-white/10 w-100"
                         target="_blank"
                         rel="noreferrer noopener">Full Recipe</a>
                         </div>
                          <div className="border border-light border  border-opacity-25">
-                                    <button className="btn  text-light bg-gradient-to-r from-indigo-900 via-pink-900 to-orange-900 w-100"
+                                    <button className="btn  text-light bg-white/10 w-100"
                                         onClick={
                                             async (e) => {
 

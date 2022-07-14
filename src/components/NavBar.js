@@ -50,7 +50,7 @@ const logout = async () => {
 
   return (
     <div className="fixed-top">
-      <nav className="bg-gradient-to-r from-red-900 via-pink-600 to-sky-800">
+      <nav className="bg-white/25">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
@@ -64,7 +64,7 @@ const logout = async () => {
                 <a className="text-white underline decoration-wavy decoration-4 italic text-2xl mb-2" href="/">Freci</a>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                <Link to="/" className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
+                <Link to="/" className=" hover:bg-gray-700 dark:hover:bg-fuchsia-900 text-white  px-3 py-2 rounded-md text-sm font-medium">
                                         Home
                                     </Link>
                 </div>
@@ -73,10 +73,10 @@ const logout = async () => {
             <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-2">
                 <ThemeSwitchButton/>
-                                <Link to="/fav" className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium" onClick={fidata}>
+                                <Link to="/fav" className=" hover:bg-gray-700 dark:hover:bg-fuchsia-900 text-white px-3 py-2 rounded-md text-sm font-medium" onClick={fidata}>
                                 Favourites
                                 </Link>
-                                <Link to="/login" className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
+                                <Link to="/login" className=" hover:bg-gray-700 dark:hover:bg-fuchsia-900 text-white px-3 py-2 rounded-md text-sm font-medium">
                                     Log in
                                 </Link>
                                 <> {
@@ -149,13 +149,14 @@ const logout = async () => {
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={divRef} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link to="/" className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">
+              <Link to="/" className="hover:bg-gray-700 dark:hover:bg-fuchsia-900 text-white block px-3 py-2 rounded-md text-base font-medium">
                                     Home
                                 </Link>
-                                <Link to="/fav" className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium" onClick={fidata}>
+                                
+                                <Link to="/fav" className="hover:bg-gray-700 dark:hover:bg-fuchsia-900 text-white block px-3 py-2 rounded-md text-base font-medium">
                                 Favourites
                                 </Link>
-                                <Link to="/login" className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">
+                                <Link to="/login" className="hover:bg-gray-700 dark:hover:bg-fuchsia-900 text-white block px-3 py-2 rounded-md text-base font-medium">
                                     Log in
                                 </Link>
                                 <> {

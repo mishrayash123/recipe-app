@@ -54,7 +54,7 @@ export default function Login() {
         <div className="mt-36 mb-56">
         
             <form onSubmit={login}
-                className="mx-auto w-50 mt-5 bg-gradient-to-r from-rose-900 via-fuchsia-900 to-purple-900  border border-dark border border-3 border-opacity-100 rounded">
+                className="mx-auto w-50 mt-5 bg-white/10  border border-light border border-3 border-opacity-10 rounded">
                 <h5 className="text-center m-3 text-white">Log in</h5>
                 <a className=" btn  text-1xl text-center text-light bg-light  bg-opacity-10  w-100 flex items-center justify-center" rel="noreferrer noopener" onClick={sum}>
                     Log in with
@@ -89,7 +89,7 @@ export default function Login() {
         <p className="m-3 text-white">If you don't have an account :
             <Link to="/signup" className="nav-link text-warning">Sign up</Link>
         </p>
-        <button type="submit" className="btn btn-dark m-3"
+        <button type="submit" className="btn btn-dark m-3 dark:hover:bg-fuchsia-900"
             onClick={login}>Log in</button>
     </form>
 </div>
