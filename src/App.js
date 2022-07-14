@@ -104,18 +104,14 @@ function App() {
                 onSubmit={onSearchClick}
                     onInputChange={onInputChange}
                     onSearchClick={onSearchClick}/>
-                <> { ypt ? 
+                <> {  
                     yash ? <div> <div className="container">
                         <Recipes recipes={recipes}/>
                     </div> <Foot />
                     </div> : <div>
                         <Default />
                         <Foot />
-                    </div> :
-                    <div>
-                    <Login />
-                    <Foot />
-                    </div>
+                    </div> 
                 } </>
             </div>
         </div>} />

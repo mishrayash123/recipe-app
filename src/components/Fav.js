@@ -26,7 +26,7 @@ const Fav = (props) => {
 
     return (
         <>{ length===0 ? <div className="bg-rose-900 dark:bg-black">
-        <h2 className=" font-serif text-3xl text-center mt-56 dark:text-white ">You have no favourite items</h2>
+        <h2 className=" font-serif italic text-3xl text-center mt-56 dark:text-white ">You have no favourite items</h2>
         <h2 className="text-white font-serif text-9xl text-center my-20 mb-56">🙅</h2>
         
     </div>  :
@@ -48,7 +48,7 @@ const Fav = (props) => {
                                 fav.image
                         }></img>
                     </a>
-                    <div className="card-body bg-white/10 text-white">
+                    <div className="card-body bg-white/10 text-white font-serif italic">
 
                         <h5>{
                             fav.label
@@ -57,22 +57,22 @@ const Fav = (props) => {
 
                     <ul className="list-group list-group-flush">
 
-                        <li className="list-group-item  bg-white/10 text-white">
+                        <li className="list-group-item  bg-white/10 text-white font-serif italic">
                             <h6>DishType : {
                                 fav.dishtype
                             }</h6>
                         </li>
-                        <li className="list-group-item  bg-white/10 text-white">
+                        <li className="list-group-item  bg-white/10 text-white font-serif italic">
                             <h6>MealType : {
                                 fav.mealtype
                             }</h6>
                         </li>
-                        <li className="list-group-item  bg-white/10 text-white">
+                        <li className="list-group-item  bg-white/10 text-white font-serif italic">
                             <h6>CuisineType : {
                                fav.cuisinetype
                             }</h6>
                         </li>
-                        <li className="list-group-item  bg-white/10 text-white">
+                        <li className="list-group-item  bg-white/10 text-white font-serif italic">
                             <h6>Calories : {
                                 fav.calories
                             }</h6>
@@ -89,12 +89,12 @@ const Fav = (props) => {
                     <a href={
                             fav.url
                         }
-                        className="btn  text-light bg-white/10 w-100"
+                        className="btn  text-light bg-white/10 w-100 font-serif italic"
                         target="_blank"
                         rel="noreferrer noopener">Full Recipe</a>
                         </div>
                          <div className="border border-light border  border-opacity-25">
-                                    <button className="btn  text-light bg-white/10 w-100"
+                                    <button className="btn  text-light bg-white/10 w-100 font-serif italic"
                                         onClick={
                                             async (e) => {
 
