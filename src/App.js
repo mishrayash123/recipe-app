@@ -1,3 +1,5 @@
+// import dotenv from 'dotenv';
+// dotenv.config({path:'./.env'})
 import React, {useState, useEffect} from "react";
 import './index.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -25,6 +27,8 @@ function App() {
     const [ypt, setypt] = useState(false);
     const [fav, setfav] = useState([]);
 
+   
+
  
     // const {
     //     transcript,
@@ -32,8 +36,8 @@ function App() {
     //     resetTranscript,
     //   } = useSpeechRecognition();
 
-    const Id = "9acb4c2b";
-    const key = "47ebe2659bfff71dcee66a073802cdbd";
+    const Id =process.env.REACT_APP_ID;
+    const key = process.env.REACT_APP_KEY;
 
 
   useEffect(() => {

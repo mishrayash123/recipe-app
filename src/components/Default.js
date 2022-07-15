@@ -49,76 +49,76 @@ const Default = props => {
     </div>
   </div>
 </div>
-<div class="row row-cols-1 row-cols-md-3 g-4 m-3">
-  <div class="col ">
-    <div class="card bg-white/10  text-white">
-      <img src={wa} class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text text-center">Breakfast </p>
+<div className="row row-cols-1 row-cols-md-3 g-4 m-3">
+  <div className="col ">
+    <div className="card bg-white/10  text-white">
+      <img src={wa} className="card-img-top" alt="..." />
+      <div className="card-body">
+        <p className="card-text text-center">Breakfast </p>
       </div>
     </div>
   </div>
-  <div class="col">
-    <div class="card bg-white/10  text-white">
-      <img src={wb} class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text text-center">Starter</p>
+  <div className="col">
+    <div className="card bg-white/10  text-white">
+      <img src={wb} className="card-img-top" alt="..." />
+      <div className="card-body">
+        <p className="card-text text-center">Starter</p>
       </div>
     </div>
   </div>
-  <div class="col">
-    <div class="card bg-white/10  text-white">
-      <img src={wc} class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text text-center">Non veg</p>
+  <div className="col">
+    <div className="card bg-white/10  text-white">
+      <img src={wc} className="card-img-top" alt="..." />
+      <div className="card-body">
+        <p className="card-text text-center">Non veg</p>
       </div>
     </div>
   </div>
-  <div class="col ">
-    <div class="card bg-white/10  text-white">
-      <img src={we} class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text text-center">Cake</p>
+  <div className="col ">
+    <div className="card bg-white/10  text-white">
+      <img src={we} className="card-img-top" alt="..." />
+      <div className="card-body">
+        <p className="card-text text-center">Cake</p>
       </div>
     </div>
   </div>
-  <div class="col ">
-    <div class="card bg-white/10  text-white ">
-      <img src={wf} class="card-img-top " alt="..." />
-      <div class="card-body">
-        <p class="card-text text-center">Salads</p>
+  <div className="col ">
+    <div className="card bg-white/10  text-white ">
+      <img src={wf} className="card-img-top " alt="..." />
+      <div className="card-body">
+        <p className="card-text text-center">Salads</p>
       </div>
     </div>
   </div>
-  <div class="col ">
-    <div class="card bg-white/10  text-white">
-      <img src={wg} class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text text-center">Pizza</p>
+  <div className="col ">
+    <div className="card bg-white/10  text-white">
+      <img src={wg} className="card-img-top" alt="..." />
+      <div className="card-body">
+        <p className="card-text text-center">Pizza</p>
       </div>
     </div>
   </div>
-  <div class="col ">
-    <div class="card bg-white/10  text-white">
-      <img src={er} class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text text-center">Ingredients</p>
+  <div className="col ">
+    <div className="card bg-white/10  text-white">
+      <img src={er} className="card-img-top" alt="..." />
+      <div className="card-body">
+        <p className="card-text text-center">Ingredients</p>
       </div>
     </div>
   </div>
-  <div class="col ">
-    <div class="card bg-white/10  text-white">
-      <img src={ert} class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text text-center"> Lunch & Dinner</p>
+  <div className="col ">
+    <div className="card bg-white/10  text-white">
+      <img src={ert} className="card-img-top" alt="..." />
+      <div className="card-body">
+        <p className="card-text text-center"> Lunch & Dinner</p>
       </div>
     </div>
   </div>
-  <div class="col">
-    <div class="card bg-white/10  text-white">
-      <img src={wd} class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text text-center">Chinese </p>
+  <div className="col">
+    <div className="card bg-white/10  text-white">
+      <img src={wd} className="card-img-top" alt="..." />
+      <div className="card-body">
+        <p className="card-text text-center">Chinese </p>
       </div>
     </div>
   </div>
