@@ -1,5 +1,3 @@
-// import dotenv from 'dotenv';
-// dotenv.config({path:'./.env'})
 import React, {useState, useEffect} from "react";
 import './index.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -38,6 +36,7 @@ function App() {
 
     const Id =process.env.REACT_APP_ID;
     const key = process.env.REACT_APP_KEY;
+
 
 
   useEffect(() => {
