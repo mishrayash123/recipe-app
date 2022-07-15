@@ -15,7 +15,7 @@ const Fav = (props) => {
             if (user) {
                 setuid(user.uid);
 
-                console.log(user);
+                
             } else {
                 setuid("");
 

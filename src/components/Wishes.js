@@ -2,7 +2,7 @@ import React from "react";
 
 const Wishes = props => {
     let time = new Date().getHours();
-    console.log(time)
+    
 
 
     return (

@@ -23,7 +23,7 @@ const NavBar =({setfav}) => {
           setya(true);
           setuid(user.uid);
             setst(user.email);
-            console.log(user);
+            
         } else {
           setya(false);
           setuid("");
@@ -37,7 +37,7 @@ const fidata = async () => {
   const snapshots = await getDocs(colRef);
   const docs = snapshots.docs.map(doc => doc.data());
   setfav(docs);
-  console.log(docs);
+  
 }
 
 const logout = async () => {
