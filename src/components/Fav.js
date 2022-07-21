@@ -34,24 +34,24 @@ const Fav = (props) => {
         <div className="mt-36 mb-56">
         <div className="row m-4">
         {
-        fav.map(fav => (
+        fav.map(favElement => (
             <div className="col-md-3 mt-4">
                 <div className="card py-2 border-white/10  text-center bg-white/10">
                     {/* <img className="img-fluid w-50 mx-auto p-1 rounded-circle" src={recipe.recipe.image}></img> */}
                     <a href={
-                            fav.url
+                            favElement.url
                         }
                         target="_blank"
                         rel="noreferrer noopener">
                         <img className="img-fluid w-50 mx-auto p-1 rounded-circle"
                             src={
-                                fav.image
+                                favElement.image
                         }></img>
                     </a>
                     <div className="card-body bg-white/10 text-white font-serif italic">
 
                         <h5>{
-                            fav.label
+                            favElement.label
                         }</h5>
                     </div>
 
@@ -59,22 +59,22 @@ const Fav = (props) => {
 
                         <li className="list-group-item  bg-white/10 text-white font-serif italic">
                             <h6>DishType : {
-                                fav.dishtype
+                                favElement.dishtype
                             }</h6>
                         </li>
                         <li className="list-group-item  bg-white/10 text-white font-serif italic">
                             <h6>MealType : {
-                                fav.mealtype
+                                favElement.mealtype
                             }</h6>
                         </li>
                         <li className="list-group-item  bg-white/10 text-white font-serif italic">
                             <h6>CuisineType : {
-                               fav.cuisinetype
+                               favElement.cuisinetype
                             }</h6>
                         </li>
                         <li className="list-group-item  bg-white/10 text-white font-serif italic">
                             <h6>Calories : {
-                                fav.calories
+                                favElement.calories
                             }</h6>
                         </li>
 
@@ -87,7 +87,7 @@ const Fav = (props) => {
                     </ul>
                     <div className="border border-light border  border-opacity-25">
                     <a href={
-                            fav.url
+                            favElement.url
                         }
                         className="btn  text-light bg-white/10 w-100 font-serif italic"
                         target="_blank"
@@ -97,11 +97,9 @@ const Fav = (props) => {
                                     <button className="btn  text-light bg-white/10 w-100 font-serif italic"
                                         onClick={
                                             async (e) => {
-
-                                                deleteDoc(doc(db, uid, fav.label));
+                                            props.setfav(fav.filter(e=>e.label!=favElement.label))
+                                                deleteDoc(doc(db, uid, favElement.label));
                                                 alert("Deleted from favourites");
-
-
                                             }
                                     }>
                                         Delete from fav &#9825;</button>
