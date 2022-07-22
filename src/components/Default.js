@@ -1,15 +1,15 @@
 import React from "react";
-import sk from './sk.jpg'
-import sp from './sp.jpg'
-import wa from './wa.jpg'
-import wb from './wb.jpg'
-import wc from './wc.jpg'
-import wd from './wd.jpg'
-import we from './we.jpg'
-import wf from './wf.jpg'
-import wg from './wg.jpg'
-import er from './er.jpg'
-import ert from './ert.jpg'
+import sk from '../images/sk.jpg'
+import sp from '../images/sp.jpg'
+import wa from '../images/wa.jpg'
+import wb from '../images/wb.jpg'
+import wc from '../images/wc.jpg'
+import wd from '../images/wd.jpg'
+import we from '../images/we.jpg'
+import wf from '../images/wf.jpg'
+import wg from '../images/wg.jpg'
+import er from '../images/er.jpg'
+import ert from '../images/ert.jpg'
 
 const Default = props => {
     return(
