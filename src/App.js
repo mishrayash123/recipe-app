@@ -72,7 +72,6 @@ function App() {
         <Routes>
         <Route path="/login" element={<div>
                 <Login />
-                <Foot />
             </div>} />
             <Route path="/" element={<div className="bg-rose-900 dark:bg-black ">
             <div>
@@ -90,7 +89,7 @@ function App() {
                         getRecipes ={getRecipes }
                         setyash={setyash}
                         />
-                    <Foot />
+                    
                     </div> : <div>
                         <Default />
                         <Voicesearch 
@@ -98,7 +97,7 @@ function App() {
                         getRecipes ={getRecipes }
                         setyash={setyash}
                         />
-                        <Foot />
+                       
                     </div> 
                 } </>
             </div>
@@ -106,21 +105,21 @@ function App() {
          <Route path="/signup" element={
         <div>
         <Signup />
-        <Foot /> 
+        
                 </div>
         } />
          <Route path="/forgetpassword" element={
         <div>
 <Forgetpassword />
-<Foot /> 
+ 
         </div>
         } />
          <Route path="/fav" element={<div>
           <> { ypt ? 
-                    <div> <Fav fav={fav} setfav={setfav}/> <Foot />
+                    <div> <Fav fav={fav} setfav={setfav}/>
                     </div> : <div>
                     <Login />
-                    <Foot /> 
+                   
                     </div>
                 } </>
           
