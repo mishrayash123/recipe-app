@@ -28,7 +28,7 @@ const Header = props => {
 
     return(
         <div className="fixed bottom-20 right-5">
-    <div className="border-2 ml-5 w-12 border-white/10 bg-white/25 border-double rounded-full" onClick={voice}>
+    <div className="border-2 ml-5 w-12 border-white/10 bg-stone-900 dark:bg-white/25 border-double rounded-full" onClick={voice}>
 <button > 
   { listening ?
    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-mic text-red-700 m-2" viewBox="0 0 16 16">

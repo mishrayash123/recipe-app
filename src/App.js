@@ -3,7 +3,6 @@ import './index.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from './components/Header';
 import Recipes from './components/recipes';
-import Foot from "./components/Foot";
 import Default from "./components/Default";
 import NavBar from "./components/NavBar"
 import Login from "./components/Login"
@@ -65,7 +64,7 @@ function App() {
 
     return (
 
-      <div className="bg-rose-900 dark:bg-black">
+      <div className="bg-gray-50 dark:bg-black">
         <BrowserRouter>
         <NavBar setfav={setfav} />
         <Wishes />
@@ -73,7 +72,7 @@ function App() {
         <Route path="/login" element={<div>
                 <Login />
             </div>} />
-            <Route path="/" element={<div className="bg-rose-900 dark:bg-black ">
+            <Route path="/" element={<div className="bg-gray-50 dark:bg-black ">
             <div>
                 <Header search={search}
                 onSubmit={onSearchClick}
