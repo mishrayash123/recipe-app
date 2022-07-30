@@ -22,7 +22,7 @@ const NavBar =({setfav}) => {
         if (user) {
           setya(true);
           setuid(user.uid);
-            setst(user.email);
+            setst(user.email[0]);
             
         } else {
           setya(false);
@@ -82,7 +82,7 @@ const logout = async () => {
                                 <> {
                                     ya ? (
 
-                                        <button type="button" className="btn btn-light bg-gradient-to-r from-indigo-500"
+                                        <button type="button" className="btn btn-light bg-gray-50 border-gray-50 text-red-900 font-bold rounded-full hover:border-blue-900 hover:bg-blue-900 hover:text-white"
                                             onClick={logout}>
                                             {st}</button>
 
