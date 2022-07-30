@@ -76,9 +76,6 @@ const logout = async () => {
                                 <Link to="/fav" className=" hover:bg-blue-900 dark:hover:bg-fuchsia-900 text-white px-3 py-2 rounded-md text-sm font-medium" onClick={fidata}>
                                 Favourites
                                 </Link>
-                                <Link to="/login" className=" hover:bg-blue-900 dark:hover:bg-fuchsia-900 text-white px-3 py-2 rounded-md text-sm font-medium">
-                                    Log in
-                                </Link>
                                 <> {
                                     ya ? (
 
@@ -86,7 +83,10 @@ const logout = async () => {
                                             onClick={logout}>
                                             {st}</button>
 
-                                    ) : null
+                                    ) :
+                                    <Link to="/login" className=" hover:bg-blue-900 dark:hover:bg-fuchsia-900 text-white px-3 py-2 rounded-md text-sm font-medium">
+                                    Log in
+                                </Link>
                                 } </>
                 </div>
               </div>
@@ -156,9 +156,7 @@ const logout = async () => {
                                 <Link to="/fav" className="hover:bg-blue-900 dark:hover:bg-fuchsia-900 text-white block px-3 py-2 rounded-md text-base font-medium">
                                 Favourites
                                 </Link>
-                                <Link to="/login" className="hover:bg-blue-900 dark:hover:bg-fuchsia-900 text-white block px-3 py-2 rounded-md text-base font-medium">
-                                    Log in
-                                </Link>
+                                
                                 <> {
                                     ya ? (
 
@@ -166,7 +164,10 @@ const logout = async () => {
                                             onClick={logout}>
                                             {st}</button>
 
-                                    ) : null
+                                    ) :
+                                    <Link to="/login" className="hover:bg-blue-900 dark:hover:bg-fuchsia-900 text-white block px-3 py-2 rounded-md text-base font-medium">
+                                    Log in
+                                </Link>
                                 } </>
                                 <ThemeSwitchButton/>
               </div>
