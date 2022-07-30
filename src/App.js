@@ -64,7 +64,7 @@ function App() {
 
     return (
 
-      <div className="bg-gray-50 dark:bg-black">
+      <div className="bg-gray-50 dark:bg-neutral-700">
         <BrowserRouter>
         <NavBar setfav={setfav} />
         <Wishes />
@@ -72,7 +72,7 @@ function App() {
         <Route path="/login" element={<div>
                 <Login />
             </div>} />
-            <Route path="/" element={<div className="bg-gray-50 dark:bg-black ">
+            <Route path="/" element={<div className="bg-gray-50 dark:bg-neutral-700 ">
             <div>
                 <Header search={search}
                 onSubmit={onSearchClick}

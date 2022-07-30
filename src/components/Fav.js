@@ -26,7 +26,7 @@ const Fav = (props) => {
 
     return (
         <div>
-        <>{ length===0 ? <div className="bg-gray-50 dark:bg-black">
+        <>{ length===0 ? <div className="bg-gray-50 dark:bg-neutral-700">
         <h2 className=" font-serif italic text-3xl text-center mt-44 dark:text-white ">You have no favourite items</h2>
         <h2 className="text-white font-serif text-9xl text-center my-20 mb-32">🙅</h2>
         

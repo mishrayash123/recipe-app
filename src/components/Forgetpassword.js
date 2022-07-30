@@ -23,7 +23,7 @@ export default function Forgetpassword() {
     return (
         <div className="mt-36">
             <form onSubmit={forgetpassword}
-                className="mx-auto w-50 mt-5 bg-stone-900 dark:bg-white/10  border border-dark border border-3 border-opacity-10 rounded ">
+                className="mx-auto w-50 mt-5 bg-fuchsia-900 dark:bg-white/10  border border-dark border border-3 border-opacity-10 rounded ">
                 <h5 className="text-center m-3 text-white">Forget Password</h5>
                 <div className="m-3">
                     <label className="form-label text-white">Email address</label>
