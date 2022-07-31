@@ -38,7 +38,7 @@ const Recipes = (props) => {
             {
             recipes.map(recipe => (
                 <div className="col-md-3 mt-4  bg-gray-50 dark:bg-neutral-700 " >
-                    <div className="card py-2 border-white/10  text-center bg-stone-900 dark:bg-white/10">
+                    <div className="card  py-2 border-white/10  text-center bg-orange-900 dark:bg-white/10">
                 <div className=" text-end m-1">
                 </div>
                         {/* <img className="img-fluid w-50 mx-auto p-1 rounded-circle" src={recipe.recipe.image}></img> */}
@@ -53,7 +53,7 @@ const Recipes = (props) => {
                             }></img>
                             
                         </a>
-                        <div className="card-body bg-stone-900 dark:bg-white/10 text-white font-serif italic">
+                        <div className="card-body  bg-orange-900 dark:bg-white/10 text-white font-serif italic">
 
                             <h5>{
                                 recipe.recipe.label
@@ -63,22 +63,22 @@ const Recipes = (props) => {
 
                         <ul className="list-group list-group-flush">
 
-                            <li className="list-group-item bg-stone-900 dark:bg-white/10 text-white font-serif italic">
+                            <li className="list-group-item bg-orange-900 dark:bg-white/10 text-white font-serif italic">
                                 <h6>DishType : {
                                     recipe.recipe.dishType
                                 }</h6>
                             </li>
-                            <li className="list-group-item bg-stone-900 dark:bg-white/10 text-white font-serif italic">
+                            <li className="list-group-item bg-orange-900 dark:bg-white/10 text-white font-serif italic">
                                 <h6>MealType : {
                                     recipe.recipe.mealType
                                 }</h6>
                             </li>
-                            <li className="list-group-item bg-stone-900 dark:bg-white/10 text-white font-serif italic">
+                            <li className="list-group-item bg-orange-900 dark:bg-white/10 text-white font-serif italic">
                                 <h6>CuisineType : {
                                     recipe.recipe.cuisineType
                                 }</h6>
                             </li>
-                            <li className="list-group-item bg-stone-900 dark:bg-white/10 text-white font-serif italic">
+                            <li className="list-group-item bg-orange-900 dark:bg-white/10 text-white font-serif italic">
                                 <h6>Calories : {
                                     recipe.recipe.calories
                                 }</h6>
@@ -95,12 +95,12 @@ const Recipes = (props) => {
                         <a href={
                                 recipe.recipe.url
                             }
-                            className="btn  text-light bg-stone-900 dark:bg-white/10 w-100 font-serif italic"
+                            className="btn  text-light bg-orange-900 dark:bg-white/10 w-100 font-serif italic"
                             target="_blank"
                             rel="noreferrer noopener">Full Recipe</a>
                             </div>
                <div className="border border-light border  border-opacity-25">
-                    <button  className="btn  text-light bg-stone-900 dark:bg-white/10 w-100 font-serif italic" onClick={
+                    <button  className="btn  text-light bg-orange-900 dark:bg-white/10 w-100 font-serif italic" onClick={
                        async (e) =>{
                         if(!uy){
                             alert("Please login to add to favourites");

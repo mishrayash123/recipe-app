@@ -37,7 +37,7 @@ const Fav = (props) => {
         {
         fav.map(favElement => (
             <div className="col-md-3 mt-4">
-                <div className="card py-2 border-white/10  text-center bg-stone-900 dark:bg-white/10">
+                <div className="card py-2 border-white/10  text-center bg-orange-900 dark:bg-white/10">
                     {/* <img className="img-fluid w-50 mx-auto p-1 rounded-circle" src={recipe.recipe.image}></img> */}
                     <a href={
                             favElement.url
@@ -49,7 +49,7 @@ const Fav = (props) => {
                                 favElement.image
                         }></img>
                     </a>
-                    <div className="card-body bg-stone-900 dark:bg-white/10 text-white font-serif italic">
+                    <div className="card-body bg-orange-900 dark:bg-white/10 text-white font-serif italic">
 
                         <h5>{
                             favElement.label
@@ -58,22 +58,22 @@ const Fav = (props) => {
 
                     <ul className="list-group list-group-flush">
 
-                        <li className="list-group-item  bg-stone-900 dark:bg-white/10 text-white font-serif italic">
+                        <li className="list-group-item  bg-orange-900 dark:bg-white/10 text-white font-serif italic">
                             <h6>DishType : {
                                 favElement.dishtype
                             }</h6>
                         </li>
-                        <li className="list-group-item  bg-stone-900 dark:bg-white/10 text-white font-serif italic">
+                        <li className="list-group-item  bg-orange-900 dark:bg-white/10 text-white font-serif italic">
                             <h6>MealType : {
                                 favElement.mealtype
                             }</h6>
                         </li>
-                        <li className="list-group-item  bg-stone-900 dark:bg-white/10 text-white font-serif italic">
+                        <li className="list-group-item  bg-orange-900 dark:bg-white/10 text-white font-serif italic">
                             <h6>CuisineType : {
                                favElement.cuisinetype
                             }</h6>
                         </li>
-                        <li className="list-group-item  bg-stone-900 dark:bg-white/10 text-white font-serif italic">
+                        <li className="list-group-item  bg-orange-900 dark:bg-white/10 text-white font-serif italic">
                             <h6>Calories : {
                                 favElement.calories
                             }</h6>
@@ -90,12 +90,12 @@ const Fav = (props) => {
                     <a href={
                             favElement.url
                         }
-                        className="btn  text-light bg-stone-900 dark:bg-white/10 w-100 font-serif italic"
+                        className="btn  text-light bg-orange-900 dark:bg-white/10 w-100 font-serif italic"
                         target="_blank"
                         rel="noreferrer noopener">Full Recipe</a>
                         </div>
                          <div className="border border-light border  border-opacity-25">
-                                    <button className="btn  text-light bg-stone-900 dark:bg-white/10 w-100 font-serif italic"
+                                    <button className="btn  text-light bg-orange-900 dark:bg-white/10 w-100 font-serif italic"
                                         onClick={
                                             async (e) => {
                                             props.setfav(fav.filter(e=>e.label!=favElement.label))
