@@ -14,9 +14,9 @@ import '../css/Defaut.css';
 
 const Default = props => {
     return(
-      <div className="bg-fuchsia-900 dark:bg-black ">
-        <div className="border-fuchsia-900 border-2 dark:border-black">
-      <div className="card mb-3 mt-5 w-75 mx-auto bg-white dark:bg-white/10  text-fuchsia-900" >
+      <div className=" ">
+        <div className="  ">
+      <div className="card mb-3 mt-5 w-75 mx-auto bg-white dark:bg-white/10  text-fuchsia-900 shadow-2xl" >
   <div className="row g-0">
     <div className="col-md-4">
       <img src={sk} className="img-fluid rounded-start yes" alt="..." />
@@ -30,7 +30,7 @@ const Default = props => {
     </div>
   </div>
 </div>
-<div className="card mb-3 w-75 mx-auto bg-white dark:bg-white/10  text-fuchsia-900" >
+<div className="card mb-3 w-75 mx-auto bg-white dark:bg-white/10  text-fuchsia-900 shadow-2xl " >
   <div className="row g-0">
     <div className="col-md-4">
       <img src={sp} className="img-fluid rounded-start yes" alt="..." />
@@ -53,7 +53,7 @@ const Default = props => {
 </div>
 <div className="row row-cols-1 row-cols-md-3 g-4 m-3 w-75 mx-auto">
   <div className="col" >
-    <div className="card  bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10   text-white" >
+    <div className="card  bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10   text-white shadow-2xl" >
       <img src={wa} className="card-img-top yes" alt="..." />
       <div className="card-body">
         <p className="card-text text-center">Breakfast </p>
@@ -61,7 +61,7 @@ const Default = props => {
     </div>
   </div>
   <div className="col">
-    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10   text-white">
+    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10   text-white shadow-2xl">
       <img src={wb} className="card-img-top yes" alt="..." />
       <div className="card-body">
         <p className="card-text text-center">Starter</p>
@@ -69,7 +69,7 @@ const Default = props => {
     </div>
   </div>
   <div className="col">
-    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10  text-white">
+    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10  text-white shadow-2xl">
       <img src={wc} className="card-img-top yes" alt="..." />
       <div className="card-body">
         <p className="card-text text-center">Non veg</p>
@@ -77,7 +77,7 @@ const Default = props => {
     </div>
   </div>
   <div className="col ">
-    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10  text-white">
+    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10  text-white shadow-2xl">
       <img src={we} className="card-img-top yes" alt="..." />
       <div className="card-body">
         <p className="card-text text-center">Cake</p>
@@ -85,7 +85,7 @@ const Default = props => {
     </div>
   </div>
   <div className="col ">
-    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10  text-white ">
+    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10  text-white  shadow-2xl">
       <img src={wf} className="card-img-top yes " alt="..." />
       <div className="card-body">
         <p className="card-text text-center">Salads</p>
@@ -93,7 +93,7 @@ const Default = props => {
     </div>
   </div>
   <div className="col ">
-    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10  text-white">
+    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10  text-white shadow-2xl">
       <img src={wg} className="card-img-top yes" alt="..." />
       <div className="card-body">
         <p className="card-text text-center">Pizza</p>
@@ -101,7 +101,7 @@ const Default = props => {
     </div>
   </div>
   <div className="col ">
-    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10  text-white">
+    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10  text-white shadow-2xl">
       <img src={er} className="card-img-top yes" alt="..." />
       <div className="card-body">
         <p className="card-text text-center">Ingredients</p>
@@ -109,15 +109,15 @@ const Default = props => {
     </div>
   </div>
   <div className="col ">
-    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10  text-white">
+    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10  text-white shadow-2xl">
       <img src={ert} className="card-img-top yes" alt="..." />
       <div className="card-body">
         <p className="card-text text-center"> Lunch & Dinner</p>
       </div>
     </div>
   </div>
-  <div className="col">
-    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10  text-white">
+  <div className="col"> 
+    <div className="card bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900  dark:bg-white/10  text-white shadow-2xl">
       <img src={wd} className="card-img-top yes" alt="..." />
       <div className="card-body">
         <p className="card-text text-center">Chinese </p>

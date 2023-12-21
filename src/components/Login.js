@@ -54,7 +54,7 @@ export default function Login() {
         <div className="mt-36">
         
             <form onSubmit={login}
-                className="mx-auto w-50 mt-5 bg-fuchsia-900 dark:bg-white/10  border border-light border border-3 border-opacity-10 rounded mb-32">
+                className="mx-auto w-50 mt-5  bg-gradient-to-r from-zinc-900 via-pink-900 to-zinc-900 dark:bg-white/10  border border-light border border-3 border-opacity-10 rounded mb-32">
                 <h5 className="text-center m-3 text-white">Log in</h5>
                 <a className=" btn  text-1xl text-center text-light bg-light  bg-opacity-10  w-100 flex items-center justify-center" rel="noreferrer noopener" onClick={sum}>
                     Log in with

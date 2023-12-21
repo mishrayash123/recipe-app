@@ -22,7 +22,7 @@ const NavBar =({setfav}) => {
         if (user) {
           setya(true);
           setuid(user.uid);
-            setst(user.email[0]);
+            setst(user.email.slice(0,1).toUpperCase());
             
         } else {
           setya(false);
